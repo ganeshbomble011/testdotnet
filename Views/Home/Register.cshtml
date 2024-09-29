@@ -1,0 +1,46 @@
+﻿@model WebApplication13.Models.emp
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div style="display:inline; border:groove 2px;">
+        <h2>Register</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(s => s.id, new { @class = "form-control" })
+            <br />
+
+
+            @Html.TextBoxFor(s => s.ename, new { @class = "form-control", placeholder = "First name" })
+            @Html.ValidationMessageFor(s => s.ename, "", new { style = "color:red" })
+            <br />
+            @Html.TextBoxFor(s => s.eemail, new { @class = "form-control", placeholder = "Last Name" })
+            @Html.ValidationMessageFor(s => s.eemail, "", new { style = "color:red" })
+            <br />
+
+
+            @Html.TextBoxFor(s => s.eaddress, new { @class = "form-control", placeholder = "Email Address" })
+            @Html.ValidationMessageFor(s => s.eaddress, "", new { style = "color:red" })
+            <br />
+
+            @Html.TextBoxFor(s => s.Gender, new { @class = "form-control", placeholder = " Password", Type = "password" })
+            @Html.ValidationMessageFor(s => s.Gender, "", new { style = "color:red" })
+            <br />
+           
+
+            <br /><br />
+
+            <input type="submit" value="Register Data" class="btn btn-outline-primary" />
+        }
+    </div>
+</body>
+</html>

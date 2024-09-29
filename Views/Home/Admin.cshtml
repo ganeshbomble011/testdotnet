@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin Page</h2>
+<style>
+    #div{
+        width:100%;
+        height:70px;
+        border:2px solid black;
+    }
+    li{
+        margin-right:200px;
+    }
+</style>
+
+<div class="frpm-control" id="div">
+
+    <li>
+
+
+
+        @Html.ActionLink("Register ", "Register", "Home", new { @class = "btn btn-outline-danger" }) |
+
+        @Html.ActionLink("Login", "Login", "Home", new { @class = "btn btn-outline-primary" }) |
+
+        @Html.ActionLink("Detail ", "Index", "Home", new { @class = "btn btn-outline-success" })
+
+    </li>
+
+
+
+
+
+
+
+</div>
+
